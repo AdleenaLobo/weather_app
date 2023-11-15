@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,6 +7,31 @@
     <link rel="stylesheet" href="../src/style.css" />
   </head>
   <body>
+    <div class="heading">
+      <h1>Weather Forecast</h1>
+    </div>
+    <div class="container">
+      <div class="search_elem">
+        <input type="text" placeholder="Search for a city" />
+        <button class="search">
+          <img src="../assets/search.png" alt="search button" id="search" />
+        </button>
+      </div>
+      <div class="place"></div>
+      <div class="current_weather">
+        <div class="conditioning">
+          <img src="" class="conditionImg" />
+          <div class="condition"></div>
+        </div>
+        <div class="temperature"></div>
+        <div>
+          <div>Wind: <span class="wind"></span></div>
+          <div>Precip: <span class="precip"></span></div>
+          <div>Pressure: <span class="pressure"></span></div>
+        </div>
+      </div>
+      <div class="following_days"></div>
+    </div>
     <script src="./main.js"></script>
   </body>
 </html>
