@@ -6,6 +6,9 @@ import { addWind } from "./windData";
 import { addPrecip } from "./precipitation";
 import { addPressure } from "./pressure";
 import { addImg } from "./pictureCondition";
+import { datesntime } from "./datentime";
+import { addBackground } from "./background";
+import { temp } from "./LS";
 
 let ans;
 async function data(val) {
@@ -23,14 +26,16 @@ async function data(val) {
 
     addPlace(await ans);
     addCondition(await ans);
-    addTemperature(await ans);
+    addTemperature(await ans, temp);
     addWind(await ans);
     addPrecip(await ans);
     addPressure(await ans);
     addImg(await ans);
+    datesntime(await ans);
+    addBackground(await ans);
   } catch (error) {
     console.log("error: " + error);
   }
 }
 
-export { data };
+export { data, ans };
